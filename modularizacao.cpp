@@ -18,10 +18,10 @@ int main(){
 
     switch(escolha){
         case 1:
-            std::cout << celsiusFahrenheit(valor) << std::endl;
+            std::cout << celsiusparaFahrenheit(valor) << std::endl;
             break;
         case 2:
-            std::cout << fahrenheitCelsius(valor) << std::endl;
+            std::cout << fahrenheitparaCelsius(valor) << std::endl;
             break;
     }
 

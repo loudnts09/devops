@@ -4,9 +4,9 @@
 extern int escolha;
 extern double valor;
 
-double celsiusFahrenheit(double temperatura);
+double celsiusparaFahrenheit(double temperatura);
 
-double fahrenheitCelsius(double temperatura);
+double fahrenheitparaCelsius(double temperatura);
 
 
 #endif
