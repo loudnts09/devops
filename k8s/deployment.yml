@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-api-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devops-api-deployment
+  template:
+    metadata:
+      labels:
+        app: devops-api-deployment
+    spec:
+      containers:
+      - name: devops-api
+        image: us-central1-docker.pkg.dev/devops-lourrayni-2024/devops-registry/devops-api:latest
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "250m"
+          limits:
+            memory: "64Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /readiness
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-api-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: devops-api-deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000

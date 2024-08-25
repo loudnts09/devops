@@ -1,0 +1,21 @@
+{
+  "name": "devops-api",
+  "version": "1.0.0",
+  "description": "Simple api project to implement and test devops concepts",
+  "main": "index.js",
+  "repository": "git@gitlab.com:ufrn-imd/devops/devops-api.git",
+  "author": "Gustavo Leitão <gustavo.leitao@imd.ufrn.br>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4"
+  }
+}
